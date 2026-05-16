@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヤギ | WEBページコーダー</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e8f7ef;
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      color: #1a1a1a;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 380px;
+      border-radius: 16px;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .card__header {
+      background: #BAEDD2;
+      height: 8px;
+    }
+
+    .card__body {
+      padding: 40px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .card__avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 4px solid #BAEDD2;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+    }
+
+    .card__info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card__name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #1a1a1a;
+    }
+
+    .card__title {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #999;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .card__divider {
+      width: 36px;
+      height: 2px;
+      background: #BAEDD2;
+      border-radius: 2px;
+    }
+
+    .card__details {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .detail__label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #bbb;
+      width: 48px;
+      flex-shrink: 0;
+    }
+
+    .detail__value {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .card__comment {
+      width: 100%;
+      background: #f4fbf7;
+      border-left: 3px solid #BAEDD2;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      font-style: italic;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .card__link {
+      width: 100%;
+    }
+
+    .card__link a {
+      display: block;
+      text-align: center;
+      background: #BAEDD2;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 14px 20px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .card__link a:hover {
+      background: #a0e4c2;
+      transform: translateY(-1px);
+    }
+
+    .card__link a:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 400px) {
+      .card__body {
+        padding: 32px 24px 28px;
+      }
+
+      .card__name {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card__header"></div>
+    <div class="card__body">
+
+      <img class="card__avatar" src="images/yagi.jpg" alt="ヤギ">
+
+      <div class="card__info">
+        <h1 class="card__name">ヤギ</h1>
+        <p class="card__title">Web Page Coder</p>
+      </div>
+
+      <div class="card__divider"></div>
+
+      <div class="card__details">
+        <div class="detail">
+          <span class="detail__label">職業</span>
+          <span class="detail__value">WEBページコーダー</span>
+        </div>
+        <div class="detail">
+          <span class="detail__label">趣味</span>
+          <span class="detail__value">動画制作</span>
+        </div>
+      </div>
+
+      <div class="card__comment">わああああ</div>
+
+      <div class="card__link">
+        <a href="https://www.youtube.com/watch?v=JZtH9brPY7k" target="_blank" rel="noopener noreferrer">
+          ▶ YouTube を見る
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
